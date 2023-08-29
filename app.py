@@ -347,7 +347,7 @@ async def procesar_hoja(dataframe,nombre_hoja,array_datos_insertar):
         #Ingreso los valores en el array para poderlos insertar previamente
         datos = [str(fila[0]),str(fila[1]),str(fila[2]),str(fila[3]),str(fila[4]),str(fila[5]),str(fila[6]),str(fila[7]),str(fila[8]),str(fila[9]),str(fila[10]),str(fila[11]),str(fila[12]),str(fila[13]),str(fila[14]),str(nombre_hoja)]
         datos = await limpiar_datos(datos)
-        array_datos_insertar.append()
+        array_datos_insertar.append(datos)
 
     await Mensaje(f"{str(len(dataframe))} Filas Procesadas de la Hoja {str(nombre_hoja)}")
 
